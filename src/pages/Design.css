@@ -1,0 +1,211 @@
+.design-container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #0a0a0a 0%, #1a0a2e 60%, #0a0a0a 100%);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.design-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.design-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.design-title .gradient-text {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.design-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 28px;
+  padding: 2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.09);
+  transition: all 0.3s cubic-bezier(.4,2,.3,1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(139, 92, 246, 0.10);
+}
+.tool-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 60px 0 rgba(139, 92, 246, 0.32), 0 0 32px 0 #8B5CF633;
+  border-color: #8B5CF6;
+}
+
+
+.tool-features li {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.tool-features li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #8B5CF6;
+  font-weight: bold;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Floating particles effect */
+.floating-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #8B5CF6;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float-particle 8s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 40%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+.particle-4 {
+  top: 70%;
+  right: 15%;
+  animation-delay: 6s;
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  33% { transform: translate(20px, -20px) scale(1.2); opacity: 0.8; }
+  66% { transform: translate(-15px, 15px) scale(0.8); opacity: 0.4; }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .design-container {
+    padding: 1rem;
+  }
+  
+  .design-title {
+    font-size: 2.5rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .tool-card {
+    padding: 1.5rem;
+  }
+  
+  .cta-section {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+}

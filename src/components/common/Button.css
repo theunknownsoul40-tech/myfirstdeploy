@@ -1,0 +1,74 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+/* Button Variants */
+.btn-primary {
+  background: linear-gradient(90deg, #a855f7 0%, #8B5CF6 50%, #2563eb 100%);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 24px 0 rgba(139, 92, 246, 0.18);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.35);
+  background: linear-gradient(90deg, #8B5CF6 0%, #A855F7 100%);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #8B5CF6;
+  border: 2px solid #8B5CF6;
+}
+
+.btn-outline:hover {
+  background: #8B5CF6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Button Sizes */
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.8rem;
+  font-size: 1.45rem;
+  border-radius: 32px;
+  letter-spacing: -1px;
+}
